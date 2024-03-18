@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 
     <script>
-         //CHAPTER 10
+        //CHAPTER 10
         //TASK 8
         document.write("<h1>TASK 8</h1>")
+        var color = ["red", "blue", "green"];
+        document.write("<h2> These are the original colors: ", color);
+
+        var addColor= prompt("What color do you want to add in the beginnig");
+        color.unshift(addColor);
+        document.write("<h2>", addColor, " : is added at beginning of array");
+        document.write("<h2>  These are the updated colors of array: ", color);
+
+        var lastAddColor = prompt("What color do you want to add in the end");
+        color.push(lastAddColor)
+        document.write("<h2>", lastAddColor, " : is added at end of array");
+        document.write("<h2>  These are the updated colors of array: ", color);
+
+        var  newColorArray =prompt("Add new color at the beginning of array");
+        var  newColorArray1 =prompt("Add one more color at the beginning of array");
+        color.unshift(newColorArray);
+        color.unshift(newColorArray1);
+        document.write(`<h2>These are the two new elements at the beginning of array: ${newColorArray,newColorArray1}`);
+        document.write("<h2>These are the colors with two new elements added at the beginning of array: ", color ,"</h2>");
+
+
+        document.write(newColorArray," is remove from the array")
+        color.shift(newColorArray);
+        document.write("<h2>These are the updated colors after removing a color: </h2>",color);
+
+        document.write(lastAddColor," is remove from the array")
+        color.pop(lastAddColor);
+        document.write("<h2>These are the updated colors after removing a color: </h2>",color);
+        
     </script>
 </body>
+
 </html>
